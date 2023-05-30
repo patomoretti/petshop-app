@@ -1,4 +1,5 @@
-import Carrito from './Cart';
+import React from 'react';
+import Carrito from './CartWidget';
 
 export default function NavBar() {
 
@@ -6,7 +7,7 @@ export default function NavBar() {
         <nav>
             <div className="navegacion">
                 <div className="sub-nav">
-                    <a href="inicio">Inicio</a>
+                    <a href="/">Inicio</a>
                 </div>
 
                 <div className="sub-nav">
@@ -18,7 +19,7 @@ export default function NavBar() {
                 </div>
 
                 <div className="sub-nav">
-                    <a href="contacto">Contactos</a>
+                    <a href="contacto">Contacto</a>
                 </div>
 
                 <div className="cart">

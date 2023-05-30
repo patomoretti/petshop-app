@@ -1,7 +1,8 @@
+import React from 'react';
 import { useState } from 'react';
-import Alimentos from './CardAlimentos';
+import Card from '../Card';
 
-const ComidaAlimentos = () => {
+const ItemDetailContainer = () => {
 
     const [comida, setComida] = useState([
         {
@@ -103,12 +104,13 @@ const ComidaAlimentos = () => {
             {comida.map((p) => {
 
                 return (
-                    <Alimentos
+                    <Card
                         key={p.id}
                         nombre={p.nombre}
                         descripcion={p.descripcion}
                         precio={p.precio}
-                        imagen={p.imagen}                        
+                        imagen={p.imagen}
+                        carrito={p.carrito}                        
                     />
                 );
 
@@ -119,4 +121,4 @@ const ComidaAlimentos = () => {
 
 }
 
-export default ComidaAlimentos;
+export default ItemDetailContainer;

@@ -1,19 +1,13 @@
-export default function Carrito() {
+import NavBar from "./NavBar";
+
+export default function CarritoCompras () {
 
     return (
-
-        <a href="carrito" target="_blank" className="cart">
-            <img src="./images/carrito.jpg" alt="logo carrito" width="50%" />
+        <div>
+            <NavBar />
             
-            <h5>Carrito</h5>
-            
-        </a>
+        </div>
+        
     )
+
 }
-
-
-
-
-
-
-

@@ -1,28 +1,41 @@
-import { Link , useParans } from "react-router-dom";
-import Alimentos from './Alimentos/index';
-import Cobayos from './Cobayos/index';
+import { useContext } from "react";
+import { Link, useParams } from "react-router-dom";
+import { Context } from './customProvider';
 
-function ListContainer() {
-    const { id } = useParans();
+
+function ItemListContainer() {
+    const { id } = useParams();
+    const { productsAdded, addItem } = useContext(Context);
+
     return (
+
         <div>
             <Link to="/category/cobayo">
                 <button>Cobayo</button>
             </Link>
 
-            <Link to="/category/alimento">
+            <Link to="/category/alimentos">
                 <button>Alimentos</button>
             </Link>
 
             {id && id === "cobayo" && (
-                <Cobayos />
+                <div>
+                    <h4>Cobayos</h4>
+                    <p>Aca irian los cobayos con descripcion</p>
+                    {/* <button onClick={() => addItem(product)}>Agregar al carrito</button> */}
+                </div>
             )}
             {id && id === "alimento" && (
-                <Alimentos />
-            )}
+                <div>
+                <h4>Alimento</h4>
+                <p>Aca irian los alimentos con descripcion</p>
+                {/* <button onClick={() => addItem(comida)}>Agregar al carrito</button> */}
+            </div>
+            )};
+
         </div>
-    );
+    )  
 }
 
-export default ListContainer;
 
+export default ItemListContainer;

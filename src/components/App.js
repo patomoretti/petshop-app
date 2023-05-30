@@ -3,7 +3,6 @@ import React from 'react';
 import NavBar from './NavBar.jsx';
 
 
-
 function App() {
   return (
     <div className="App">
@@ -25,7 +24,10 @@ function App() {
           <h4>En la barra de navegacion podras ir a Cobayos y Alimentos</h4>
         </div>
 
+
       </body>
+
+
     </div>
 
   )
