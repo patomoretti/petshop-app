@@ -84,6 +84,12 @@
 }
 
 
+.carritocompras{
+  display: flex;
+  justify-content: center;
+  margin-top: 5%;
+}
+
 /* CONTADOR */
 .contador{
   display: flex;
@@ -140,22 +146,6 @@
 
 
 /* COBAYOS */
-
-
-
-
-
-/* FOOTER */
-.footer{
-  display: flex;
-  border-style: solid;
-  border-bottom-width: 2px;
-  border-bottom-color: rgb(129, 129, 129);
-}
-
-.productosyservicios{
-  display: flex;
-}
 
 
 /* CONTACTO */

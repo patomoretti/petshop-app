@@ -11,7 +11,7 @@ import Alimentos from '../src/components/Alimentos/index';
 import Contacto from './components/Contacto/index';
 import CarritoCompras from './components/Carrito/index';
 import ItemListContainer from './components/ItemListContainer';
-import ItemDetailContainer from './components/Alimentos/ItemDetailContainer';
+import Alimento from './components/Alimentos/ItemDetailContainer';
 import { CustomProvider } from './components/customProvider';
 
 
@@ -42,9 +42,9 @@ const router = createBrowserRouter([
   },
   {
     path: "/item/:id",
-    element: <ItemDetailContainer />,
+    element: <Alimento />,
   },
-  
+
 
 ]);
 
@@ -53,9 +53,9 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <StrictMode>
     <CustomProvider>
-      <React.StrictMode>
-        <RouterProvider router={router} />
-      </React.StrictMode>
+    <React.StrictMode>
+      <RouterProvider router={router} />
+    </React.StrictMode>
     </CustomProvider>
   </StrictMode>
 );

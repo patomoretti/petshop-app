@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import Card from '../Card';
 
-const ItemDetailContainer = () => {
+const Cobayos = () => {
 
     const [cobayo, setCobayo] = useState([
         {
@@ -86,4 +86,4 @@ const ItemDetailContainer = () => {
 }
 
 
-export default ItemDetailContainer;
+export default Cobayos;

@@ -28,10 +28,6 @@ const Cards = (card) => {
                     <button> Ir al carrito </button>
                 </Link>
 
-                <Link to="/cart">
-                    <button>Agregar al carrito</button>
-                </Link>
-
                 <Link to="/itemdetailcontainer">
                     <button>Ver mas</button>
                 </Link>

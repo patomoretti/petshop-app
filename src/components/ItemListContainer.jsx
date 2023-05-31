@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import { Link, useParams } from "react-router-dom";
 import { Context } from './customProvider';
+import Alimento from "./Alimentos/ItemDetailContainer";
 
 
 function ItemListContainer() {
@@ -22,7 +23,7 @@ function ItemListContainer() {
                 <div>
                     <h4>Cobayos</h4>
                     <p>Aca irian los cobayos con descripcion</p>
-                    {/* <button onClick={() => addItem(product)}>Agregar al carrito</button> */}
+                    <button onClick={() => addItem(Alimento)}>Agregar al carrito</button>
                 </div>
             )}
             {id && id === "alimento" && (

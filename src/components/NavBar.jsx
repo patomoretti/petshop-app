@@ -1,6 +1,7 @@
 import React from 'react';
 import Carrito from './CartWidget';
 
+
 export default function NavBar() {
 
     return (

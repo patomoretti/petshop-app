@@ -20,8 +20,9 @@ function App() {
 
       <body>
         <div className="titulo">
-          <h2>Bienvenidos a Pet Shop Mapache</h2>
+          <h1>Bienvenidos a Pet Shop Mapache</h1>
           <h4>En la barra de navegacion podras ir a Cobayos y Alimentos</h4>
+          <h4>En la card si clickeas "Ir al carrito", te va a llevar a esa seccion al igual que "Carrito" del NavBar</h4>
         </div>
 
 

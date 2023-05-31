@@ -2,7 +2,7 @@ import React from 'react';
 import { useState } from 'react';
 import Card from '../Card';
 
-const ItemDetailContainer = () => {
+const Alimento = () => {
 
     const [comida, setComida] = useState([
         {
@@ -121,4 +121,4 @@ const ItemDetailContainer = () => {
 
 }
 
-export default ItemDetailContainer;
+export default Alimento;

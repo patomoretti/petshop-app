@@ -1,9 +1,9 @@
 import React , {useState, createContext} from 'react';
-import ItemDetailContainer from './Alimentos/ItemDetailContainer';
+
 
 export const Context = createContext();
 
-export const CustomProvider = ({product}) => {
+export const CustomProvider = ({children}) => {
     const [productsAdded, setProductsAdded] = useState([]);
 
     const addItem = () => {
@@ -12,5 +12,5 @@ export const CustomProvider = ({product}) => {
 
     const value = {productsAdded , addItem };
 
-    return <Context.Provider value={value}>{product}</Context.Provider>;
+    return <Context.Provider value={value}>{children}</Context.Provider>;
 }
