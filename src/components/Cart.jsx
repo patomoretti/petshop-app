@@ -1,13 +1,12 @@
-import NavBar from "./NavBar";
+import NavScrollExample from "./NavBar";
 
 
 export default function CarritoComp () {
 
     return (
         <div>
-            <NavBar />
+            <NavScrollExample />
         </div>
-        
-    )
 
+    )
 }

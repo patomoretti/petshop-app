@@ -1,6 +1,6 @@
 import '../App.css';
 import React from 'react';
-import NavBar from '../NavBar.jsx';
+import NavScrollExample from '../NavBar.jsx';
 import ItemDetailContainer from '../Alimentos/ItemDetailContainer';
 
 function Alimentos() {
@@ -12,8 +12,8 @@ function Alimentos() {
             <img src="../logo-pet.png" alt="logo" width="100%" />
           </div>
   
-          <div className="navegation">
-            <NavBar />
+          <div className="navegationbar">
+            <NavScrollExample />
           </div>
   
         </header>

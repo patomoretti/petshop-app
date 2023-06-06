@@ -1,6 +1,6 @@
 import '../App.css';
 import React from 'react';
-import NavBar from '../NavBar';
+import NavScrollExample from '../NavBar.jsx';
 import ItemDetailContainer from '../Cobayos/ItemDetailContainer';
 
 function Cobayos() {
@@ -12,8 +12,8 @@ function Cobayos() {
             <img src="../logo-pet.png" alt="logo" width="100%" />
           </div>
   
-          <div className="navegation">
-            <NavBar />
+          <div className="navegationbar">
+            <NavScrollExample />
           </div>
   
         </header>

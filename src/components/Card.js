@@ -1,46 +1,29 @@
-import Contador from './ItemCount';
-import {Link} from "react-router-dom";
+// import Contador from './ItemCount';
+import { Link } from "react-router-dom";
+import Button from 'react-bootstrap/Button';
+import Card from 'react-bootstrap/Card';
 
 
-const Cards = (card) => {
+export default function BasicExample(card) {
     return (
-        <div className="diferentescard">
-            
-            <div className="variedadescard">
-                {card.id}
-                <div className="imagencard">
-                        <img src={card.imagen} width="100%"alt={card.nombre} />
-                </div>
+        <Card className="bootstrapcard" style={{ width: '18rem' }}>
+            <Card.Img variant="top" src={card.imagen} />
+            <Card.Body>
+                <Card.Title>{card.nombre}</Card.Title>
+                <Card.Text>
+                    {card.descripcion}
+                </Card.Text>
+                <div className="cardbuttons">
+                    
+                    <Link to="/itemdetailcontainer">
+                        <Button variant="primary">Ver mas</Button>
+                    </Link>
                 
-                <div className="nombrecard">
-                    <h2>{card.nombre}</h2>
+                    <Link to="/cart">
+                        <Button variant="success"> Ir al carrito </Button>
+                    </Link>
                 </div>
-
-                <div className="descripcioncard">
-                    <p>{card.descripcion}</p>
-                </div>
-
-                <div className="preciocard">
-                    <h4>{card.precio}</h4>
-                </div>
-
-                <Link to="/cart">
-                    <button> Ir al carrito </button>
-                </Link>
-
-                <Link to="/itemdetailcontainer">
-                    <button>Ver mas</button>
-                </Link>
-
-                <div className="contadorcard">
-                    <Contador />
-                </div>
-
-            </div>
-            
-        </div>
-    )
+            </Card.Body>
+        </Card>
+    );
 }
-
-
-export default Cards;

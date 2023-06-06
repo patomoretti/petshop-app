@@ -6,11 +6,14 @@ export default function Carrito() {
     const {productsAdded} = useContext(Context);
     return (
         <Link to="/cart">
-            <a href="CarritoCompras" className="cart">
-                <img src="./images/carrito.jpg" alt="logo carrito" width="50%" />
-                <span>{productsAdded.length}</span>
-                <h5>Carrito</h5>
-            </a>
+            <div className="navcarrito">
+                <div className="imagencart">
+                    <img src="./images/carrito.jpg" alt="logo carrito" width="100%" />
+                    <span>{productsAdded.length}</span>
+                    <h6>Carrito</h6>
+                </div>
+                
+            </div>
         </Link>
     )
 }
