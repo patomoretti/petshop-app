@@ -75,7 +75,6 @@ const Cobayos = () => {
                         descripcion={c.descripcion}
                         precio={c.precio}
                         imagen={c.imagen}
-                        carrito={c.carrito}
                     />
                 );
 

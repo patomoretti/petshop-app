@@ -8,6 +8,7 @@ import Navbar from 'react-bootstrap/Navbar';
 
 
 export default function NavScrollExample() {
+
     return (
         <Navbar bg="light" expand="lg">
             <Container fluid>

@@ -1,5 +1,6 @@
 import {useState} from 'react';
 
+
 export default function Contador () {
     const [count, setCount] = useState (0)
 
@@ -12,9 +13,13 @@ export default function Contador () {
 
     return (
         <div className="contador">
-            <button onClick={sumar}>+</button>
+            <div className="botonescontador">
+                <h4 onClick={sumar}>+</h4>
+            </div>
             <h4>{count}</h4>
-            <button onClick={restar}>-</button>
+            <div className="botonescontador">
+                <h4 onClick={restar}>-</h4>
+            </div>
         </div>
     );
 }

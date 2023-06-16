@@ -1,6 +1,5 @@
 import './App.css';
 import React from 'react';
-// import NavBar from './NavBar.jsx';
 import NavScrollExample from './NavBar.jsx';
 import { Carousel } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';

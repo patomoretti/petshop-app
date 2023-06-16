@@ -1,42 +1,34 @@
-import { useContext } from "react";
-import { Link, useParams } from "react-router-dom";
+import { useContext , useEffect } from "react";
+import { useParams, Link } from "react-router-dom";
 import { Context } from './customProvider';
 import Alimento from "./Alimentos/ItemDetailContainer";
+import Contador from "./ItemCount";
+import { Button } from "react-bootstrap";
+import CarritoComp from "./Cart";
 
+export default function ItemListContainer() {
 
-function ItemListContainer() {
     const { id } = useParams();
     const { productsAdded, addItem } = useContext(Context);
 
     return (
 
         <div>
-            <Link to="/category/cobayo">
-                <button>Cobayo</button>
-            </Link>
 
-            <Link to="/category/alimentos">
-                <button>Alimentos</button>
-            </Link>
-
-            {id && id === "cobayo" && (
+            {id && id === "Alimento" && (
                 <div>
-                    <h4>Cobayos</h4>
-                    <p>Aca irian los cobayos con descripcion</p>
-                    <button onClick={() => addItem(Alimento)}>Agregar al carrito</button>
+                    < div className="productoindividual">
+                        <img src="imagen"></img>
+                        <h4>Titulo</h4>
+                        <p>Descripcion</p>
+                        <p>Precio</p>
+                        <Contador />
+                        <Button onClick={() => productsAdded()} variant="success"> Agregar al carrito</Button>
+                        <Link to="/cart">Ir al carrito</Link>
+                    </div>
                 </div>
-            )}
-            {id && id === "alimento" && (
-                <div>
-                <h4>Alimento</h4>
-                <p>Aca irian los alimentos con descripcion</p>
-                {/* <button onClick={() => addItem(comida)}>Agregar al carrito</button> */}
-            </div>
             )};
 
         </div>
     )  
 }
-
-
-export default ItemListContainer;

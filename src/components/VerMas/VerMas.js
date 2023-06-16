@@ -1,12 +1,12 @@
-import NavScrollExample from "./NavBar";
-import { agregarAlCarrito } from "./ItemListContainer";
-import CustomProvider from './customProvider';
+import '../App.css';
+import React from 'react';
+import NavScrollExample from '../NavBar.jsx';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import ItemListContainer from '../ItemListContainer';
 
-
-export default function CarritoComp() {
-    
+function VerMas() {
     return (
-        <div className="carritocompras">
+        <div className="vermas">
             <header className="App-header">
 
                 <div className="logo">
@@ -19,8 +19,8 @@ export default function CarritoComp() {
             </header>
 
             <body>
+                <ItemListContainer />
 
-                <h4>Carrito de compras!! </h4>
 
             </body>
 
@@ -28,3 +28,5 @@ export default function CarritoComp() {
 
     )
 }
+
+export default VerMas;

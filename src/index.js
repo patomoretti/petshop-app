@@ -10,10 +10,34 @@ import App from './components/App';
 import Cobayos from '../src/components/Cobayos/index';
 import Alimentos from '../src/components/Alimentos/index';
 import Contacto from './components/Contacto/index';
-import CarritoCompras from './components/Carrito/index';
-import ItemListContainer from './components/ItemListContainer';
+import CarritoComp from './components/Cart.jsx';
 import Alimento from './components/Alimentos/ItemDetailContainer';
+import VerMas from './components/VerMas/VerMas';
 import { CustomProvider } from './components/customProvider';
+
+
+
+// Import the functions you need from the SDKs you need
+import { initializeApp } from "firebase/app";
+// import { getAnalytics } from "firebase/analytics";
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
+
+// Your web app's Firebase configuration
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+const firebaseConfig = {
+  apiKey: "AIzaSyBelXPO5jYcEeG-6ip-omTCDLe8tOM5Xa0",
+  authDomain: "petshopmapache-fa0cb.firebaseapp.com",
+  projectId: "petshopmapache-fa0cb",
+  storageBucket: "petshopmapache-fa0cb.appspot.com",
+  messagingSenderId: "461169165163",
+  appId: "1:461169165163:web:25550a8f3725ae1f13822e",
+  measurementId: "G-K96SNB58YH"
+};
+
+// Initialize Firebase
+initializeApp(firebaseConfig);
+// const analytics = getAnalytics(app);
 
 
 const router = createBrowserRouter([
@@ -34,12 +58,12 @@ const router = createBrowserRouter([
     element: <Contacto />,
   },
   {
-    path: "/cart",
-    element: <CarritoCompras />,
+    path: "/detalle_producto",
+    element: <VerMas />,
   },
   {
-    path: "/category/:id",
-    element: <ItemListContainer />,
+    path: "/cart",
+    element: <CarritoComp />,
   },
   {
     path: "/item/:id",
@@ -54,9 +78,9 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <StrictMode>
     <CustomProvider>
-    <React.StrictMode>
+      <React.StrictMode>
       <RouterProvider router={router} />
-    </React.StrictMode>
+      </React.StrictMode>
     </CustomProvider>
   </StrictMode>
 );
